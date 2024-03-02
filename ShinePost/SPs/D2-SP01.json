@@ -1,0 +1,21 @@
+{
+    "Version" : 2,
+    "ProjectName" : "SHINEPOST",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 19.0 --qg-size 16 --tu-inter-depth 3 --tu-intra-depth 3 --max-tu-size 16 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -3 --crqpoffs -3 --no-sao --me 3 --subme 5 --merange 38 --limit-tu 0 --b-intra --rect --no-amp --ref 5 --weightb --keyint 240 --min-keyint 1 --bframes 8 --aq-mode 1 --aq-strength 0.90 --rd 5 --psy-rd 1.7 --psy-rdoq 1.0 --vbv-maxrate 36000 --vbv-bufsize 46000 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --no-strong-intra-smoothing --colorprim bt709 --transfer bt709 --colormatrix bt709", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+		"MuxOption" : "Default",
+		"OutputCodec" : "flac",
+		"Language" : "jpn",
+		"Optional": true
+    }],
+    "InputScript" : "D2-SP01.vpy",
+    "Fps" : 29.970,
+    "InputFiles" : [
+	    "F:\\BDMV\\ShinePost\\[BDMV][230324][TCBD-1345][シャインポスト][Blu-ray BOX Vol.2 Fin]\\SHINEPOST_BOX2_DISC2\\BDMV\\STREAM\\00012.m2ts",
+    ],
+    "Rpc" : true
+}

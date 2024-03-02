@@ -1,0 +1,24 @@
+{
+    "Version" : 2,
+    "ProjectName" : "SP",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 15.0 --high-tier --qg-size 16 --tu-inter-depth 3 --tu-intra-depth 3 --min-cu-size 8 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 38 --vbv-maxrate 38000 --vbv-bufsize 42000 --b-intra --limit-tu 0 --no-rect --no-amp --ref 5 --weightb --keyint 240 --min-keyint 1 --bframes 8 --aq-mode 3 --aq-strength 1.00 --rd 5 --psy-rd 1.9 --psy-rdoq 1.0 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.70 --colorprim bt709 --transfer bt709 --colormatrix bt709 --no-strong-intra-smoothing", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+		"OutputCodec" : "flac",
+		"MuxOption" : "Default",
+		"Language" : "jpn",
+    }],
+    "InputScript" : "PV_Normal1.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "00007.m2ts",
+    ],
+    "Config" : {
+        "VspipeArgs" : [
+        ]
+    },
+    "Rpc" : true
+}

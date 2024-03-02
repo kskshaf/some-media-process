@@ -1,0 +1,29 @@
+{
+    "Version" : 2,
+    "ProjectName" : "S2_Vol2_00004_x264_SC",
+    "EncoderType" : "x264",
+    "Encoder" : "x264_x64_mcf.exe",
+    "EncoderParam" : "--preset veryslow --profile high --crf 19.5 --deblock -1:-1 --keyint 480 --min-keyint 1 --ref 9 --vbv-bufsize 34000 --vbv-maxrate 30000 --chroma-qp-offset 2 --qcomp 0.65 --rc-lookahead 80 --aq-mode 3 --aq-strength 0.75 --merange 24 --psy-rd 0.50:0.15 --fgo 1 --no-fast-pskip --colorprim bt709 --transfer bt709 --colormatrix bt709 --subme 10", 
+    "ContainerFormat" : "mp4",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+        "OutputCodec" : "aac",
+		"Bitrate" : "256",
+		"MuxOption" : "Default",
+        "Language" : "jpn",
+        "Optional": true
+    },{
+        "TrackId" : 1,
+        "MuxOption" : "Skip"		
+    }],
+    "InputScript" : "[S2_Vol2_00004]MagicaRecord_x264_sc.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "00005.m2ts",
+    ],
+    "Config" : {
+        "VspipeArgs" : [
+        ]
+    },
+    "Rpc" : true
+}

@@ -1,0 +1,24 @@
+{
+    "Version" : 2,
+    "ProjectName" : "Kanokon PV",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 15.0 --qg-size 16 --tu-inter-depth 3 --tu-intra-depth 3 --max-tu-size 16 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 57 --vbv-maxrate 32000 --vbv-bufsize 38000 --limit-tu 0 --b-intra --no-rect --no-amp --ref 5 --weightb --keyint 360 --min-keyint 1 --bframes 6 --aq-mode 1 --aq-strength 0.90 --rd 5 --psy-rd 1.8 --psy-rdoq 0.8 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --colorprim bt709 --transfer bt709 --colormatrix bt709 --no-strong-intra-smoothing", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+		"OutputCodec" : "flac",
+		"MuxOption" : "Default",
+		"Language" : "jpn",
+    }],
+    "InputScript" : "Kanokon_PV.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "PV.mkv",
+    ],
+    "Config" : {
+        "VspipeArgs" : [
+        ]
+    },
+    "Rpc" : false
+}

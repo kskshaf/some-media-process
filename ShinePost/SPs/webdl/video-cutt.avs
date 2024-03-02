@@ -1,0 +1,5 @@
+#video=LWLibavVideoSource("D:\Download\videoplayback.webm")
+video=BlankClip(length=502505,fps=60.0,fps_denominator=1)
+audio=LWLibavAudioSource("D:\Download\videoplayback.m4a",av_sync=true)
+AudioDub(video,audio)
+#Trim(12572,72854)+Trim(192548,478431)

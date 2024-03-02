@@ -1,0 +1,21 @@
+{
+    "Version" : 2,
+    "ProjectName" : "PV&CM",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 15.0 --qg-size 16 --tu-inter-depth 3 --tu-intra-depth 3 --max-tu-size 16 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 38 --limit-tu 0 --b-intra --no-rect --no-amp --ref 5 --weightb --keyint 240 --min-keyint 1 --bframes 8 --aq-mode 3 --aq-strength 0.86 --rd 5 --psy-rd 1.7 --psy-rdoq 1.0 --vbv-maxrate 30000 --vbv-bufsize 40000 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --no-strong-intra-smoothing --colorprim bt709 --transfer bt709 --colormatrix bt709", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+		"OutputCodec" : "flac",
+		"MuxOption" : "Default",
+		"Language" : "jpn",
+    }],
+    "InputScript" : "pv-cm.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "F:\\BDMV\\[220329] ラブライブ! サンシャイン!! Blu-ray BOX\\BD\\Special Disc 1\\BDMV\\STREAM\\00038.m2ts",
+	    "F:\\BDMV\\[220329] ラブライブ! サンシャイン!! Blu-ray BOX\\BD\\Special Disc 1\\BDMV\\STREAM\\00039.m2ts",
+    ],
+    "Rpc" : true
+}

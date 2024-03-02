@@ -1,0 +1,21 @@
+{
+    "Version" : 2,
+    "ProjectName" : "227 03",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "--y4m -D 10 --preset slower --ctu 32 --crf 14.0 --high-tier --qg-size 8 --tu-inter-depth 3 --tu-intra-depth 3 --max-tu-size 16 --deblock -1:-1 --pbratio 1.2 --cbqpoffs 2 --crqpoffs 2 --no-sao --me 3 --subme 5 --merange 57 --vbv-maxrate 35000 --vbv-bufsize 45000 --limit-tu 0 --b-intra --no-rect --no-amp --ref 5 --weightb --keyint 240 --min-keyint 1 --bframes 8 --aq-mode 3 --aq-strength 0.85 --rd 5 --psy-rd 1.8 --psy-rdoq 1.0 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.68 --colorprim bt709 --transfer bt709 --colormatrix bt709 --no-strong-intra-smoothing", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"MuxOption" : "Skip",
+    }],
+    "InputScript" : "03.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "00003.m2ts",
+    ],
+    "Config" : {
+        "VspipeArgs" : [
+        ]
+    },
+    "Rpc" : true
+}

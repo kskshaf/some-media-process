@@ -1,0 +1,18 @@
+{
+    "Version" : 2,
+    "ProjectName" : "SHINEPOST-SPBB",
+    "EncoderType" : "x265",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 19.0 --qg-size 32 --tu-inter-depth 1 --tu-intra-depth 1 --max-tu-size 32 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 57 --limit-tu 0 --b-intra --no-rect --no-amp --ref 5 --weightb --keyint 240 --min-keyint 1 --bframes 8 --aq-mode 1 --aq-strength 0.80 --rd 5 --psy-rd 1.7 --psy-rdoq 0.9 --vbv-maxrate 32000 --vbv-bufsize 42000 --rdoq-level 2 --frame-threads 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --no-strong-intra-smoothing --colorprim bt709 --transfer bt709 --colormatrix bt709",
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+		"MuxOption" : "Default",
+		"OutputCodec" : "aac",
+		"Bitrate" : 256,
+		"Language" : "jpn",
+		"Optional": true
+    }],
+    "InputScript" : "d2-13.vpy",
+    "Fps" : 29.970,
+    "Rpc" : true
+}

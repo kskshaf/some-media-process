@@ -1,0 +1,5 @@
+LoadPlugin("E:\Software\AvisynthRepository\AVSPLUS370_x64\plugins\LSMASHSource.dll")
+video=LWLibavVideoSource("E:\BD\MV\BDROM\BDMV\STREAM\00005.m2ts")
+audio=LWLibavAudioSource("E:\BD\MV\BDROM\BDMV\STREAM\00005.wav",av_sync=true)
+AudioDub(video,audio)
+Trim(6953,16203)

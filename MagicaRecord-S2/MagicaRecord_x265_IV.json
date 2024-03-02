@@ -1,0 +1,29 @@
+{
+    "Version" : 2,
+    "ProjectName" : "Magica Record x265 IV",
+    "EncoderType" : "x265",
+    "Encoder" : "x265.exe",
+    "EncoderParam" : "-D 10 --preset slower --ctu 32 --crf 19.0 --level-idc 5.1 --high-tier --qg-size 16 --tu-inter-depth 4 --tu-intra-depth 4 --max-tu-size 16 --deblock -1:-1 --pbratio 1.2 --cbqpoffs -2 --crqpoffs -2 --no-sao --me 3 --subme 5 --merange 57 --vbv-maxrate 34000 --vbv-bufsize 40000 --limit-tu 0 --b-intra --no-rect --no-amp --ref 6 --weightb --keyint 360 --min-keyint 1 --bframes 8 --aq-mode 1 --aq-strength 0.80 --rd 5 --psy-rd 1.6 --psy-rdoq 0.9 --rdoq-level 1 --no-open-gop --rc-lookahead 80 --scenecut 40 --qcomp 0.65 --colorprim bt709 --transfer bt709 --colormatrix bt709 --no-strong-intra-smoothing", 
+    "ContainerFormat" : "mkv",
+    "AudioTracks" : [{
+		"TrackId" : 0,
+        "OutputCodec" : "flac",
+		"MuxOption" : "Default",
+        "Name": "Main Audio",
+        "Language" : "jpn",
+        "Optional": true
+    },{
+        "TrackId" : 1,
+        "MuxOption" : "Skip"		
+    }],
+    "InputScript" : "MagicaRecord_x265_IV.vpy",
+    "Fps" : 23.976,
+    "InputFiles" : [
+	    "00005.m2ts",
+    ],
+    "Config" : {
+        "VspipeArgs" : [
+        ]
+    },
+    "Rpc" : true
+}
