@@ -17,7 +17,7 @@ cb = DFTTest(src, sigma=3, tbsize=3)
 cb = haf.EdgeCleaner(cb, strength=15, rmode=20)
 
 aa_y = cb.std.ShufflePlanes(0, vs.GRAY)
-aa_y = taa.TAAmbk(aa_y, aatype=3, aarepair=-20, sharp=-0.5, mtype=3, postaa=True, stabilize=2, cycle=1)
+aa_y = taa.TAAmbk(aa_y, aatype=3, aarepair=-20, sharp=-0.5, mtype=3, postaa=True, stabilize=0, cycle=1)
 aa = core.std.ShufflePlanes([aa_y, cb], [0,1,2], vs.YUV)
 
 up = nnrs.nnedi3_resample(aa, 1920, 1080, nsize=3, qual=2, mode='znedi3', csp=vs.YUV420P16)

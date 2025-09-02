@@ -42,7 +42,7 @@ bm3d = core.std.MaskedMerge(src16,bm3d,mask_w)
 mask_e = core.tcanny.TCanny(get_y, sigma=1.3, mode=1, op=0)
 mask_m = haf.MinBlur(mask_e).rgvs.RemoveGrain(20)
 mask_k = core.std.Expr([mask_e,mask_m],["x y - abs"]).std.Binarize(6000).std.Maximum().std.Minimum()
-aa16 = taa.TAAmbk(src16,aatype=1,mtype=2,postaa=True,aarepair=-20,cycle=1,stabilize=2)
+aa16 = taa.TAAmbk(src16,aatype=1,mtype=2,postaa=True,aarepair=-20,cycle=1,stabilize=0)
 aa16 = core.std.MaskedMerge(bm3d, aa16, mask_k)
 aa16 = Deband(bm3d,aa16)
 #D_AA

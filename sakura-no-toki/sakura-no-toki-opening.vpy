@@ -11,7 +11,7 @@ de = haf.EdgeCleaner(cb, strength=15, rmode=20)
 db = zvs.xdbcas(cb,y=[48,36],cb=[36,24],cr=[36,24],mask=True,casstr=0)
 
 aa_y = db.std.ShufflePlanes(0,vs.GRAY)
-aa_y = taa.TAAmbk(aa_y,aatype=3,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=1)
+aa_y = taa.TAAmbk(aa_y,aatype=3,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=0,cycle=1)
 
 aa = core.std.ShufflePlanes([aa_y,db],[0,1,2],vs.YUV)
 mvf.Depth(aa, depth=10).set_output()

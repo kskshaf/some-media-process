@@ -37,7 +37,7 @@ bm3d_y=rs_y
 rs_f=core.edgefixer.Continuity(rs_y,left=2,top=2,right=2,bottom=2)
 rs_m=core.std.BlankClip(rs_y).std.CropRel(2,2,2,2).std.AddBorders(2,2,2,2,65535)
 rs_y=core.std.MaskedMerge(rs_y,rs_f,rs_m)
-rs_y=MRcoref(rs_y,'Debilinear',h=720,mask_dif_pix=3.6,mthr=[6,5],show='result',blur_mask=True,ds_aa=True,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,aacycle=0,dark=0,dehalo=True,dering=True,thlimi=80,thlima=160,brightstr=1.0,drthr=5)
+rs_y=MRcoref(rs_y,'Debilinear',h=720,mask_dif_pix=3.6,mthr=[6,5],show='result',blur_mask=True,ds_aa=True,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=0,aacycle=0,dark=0,dehalo=True,dering=True,thlimi=80,thlima=160,brightstr=1.0,drthr=5)
 rs=core.std.ShufflePlanes([rs_y,bm3d],[0,1,2],vs.YUV)
 #Deband&MergeNoise
 db1=zvs.xdbcas(rs,y=[48,36],cb=[32,24],cr=[32,24],mask=True,casstr=0.16)

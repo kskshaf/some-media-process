@@ -33,7 +33,7 @@ def DBMask(clip):
 a=r"E:\BD\[210714] ｢11という名の永遠の素数｣／22／7 [完全生産限定盤C] (flac)\SRCL-11790\BDMV\STREAM\00003.m2ts"
 src8=core.lsmas.LWLibavSource(a)
 src16=mvf.Depth(src8,16)
-aa16=taa.TAAmbk(src16,aatype=3,aarepair=-20,mtype=2,sharp=-0.5,postaa=True,stabilize=2)
+aa16=taa.TAAmbk(src16,aatype=3,aarepair=-20,mtype=2,sharp=-0.5,postaa=True,stabilize=0)
 nrmask=DBMask(src16)
 nrmask=ksf.Y(nrmask)#DebandMask
 db1=Deband(aa16,nrmask,range1=8,range2=12,y1=48,c1=36,r1=36,y2=36,c2=24,r2=24,thr=0.6,thrc=0.5,elast=2.0,first_plane=False)

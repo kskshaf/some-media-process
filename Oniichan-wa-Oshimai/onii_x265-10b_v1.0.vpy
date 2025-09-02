@@ -47,7 +47,7 @@ bm3d_b=core.bm3dcpu.BM3Dv2(flt,dft,sigma=[5,4],block_step=8,bm_range=7,radius=0,
 bm3d=core.bm3dcpu.BM3Dv2(flt,bm3d_b,sigma=[1.6,1.0],block_step=7,bm_range=7,radius=1,ps_num=2,ps_range=5)
 src=xvs.rescalef(bm3d,'Debicubic',h=844,b=0.33,c=0.33,mask_dif_pix=2)
 src=haf.FineDehalo(src,brightstr=0.8,darkstr=0)
-src=taa.TAAmbk(src,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2)
+src=taa.TAAmbk(src,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=0)
 src=Sharp(src,t_h=12,t_l=8,mode=1,op=2,elast=4.5)
 src=Deband(src,DBMask(src),8,15,48,36,36,36,24,24,thr=1.0,thrc=0.8,elast=3)
 src=mvf.Depth(src,10)[:25]

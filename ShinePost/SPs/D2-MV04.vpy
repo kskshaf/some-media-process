@@ -12,7 +12,7 @@ src8=core.lsmas.LWLibavSource(a,repeat=True)
 src8=core.std.SetFieldBased(src8,0)
 src16=core.fmtc.bitdepth(src8,bits=16)
 dhl=haf.EdgeCleaner(src16,strength=2,rmode=20)
-aa=taa.TAAmbk(dhl,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=0)
+aa=taa.TAAmbk(dhl,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=0,cycle=0)
 aa=zvs.xdbcas(aa,mask=True,casstr=0)
 
 preview0=src16
