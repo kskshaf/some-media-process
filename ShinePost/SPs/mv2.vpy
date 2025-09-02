@@ -33,7 +33,7 @@ dr_diff=core.std.MakeDiff(bm3d_y, dehalo)
 dering=haf.HQDeringmod(dehalo,mrad=1,msmooth=1,mthr=58,minp=1,sharp=1,thr=2.0,elast=1.8)
 dering=haf.EdgeCleaner(dering,strength=8,rmode=20)
 # AA
-aa=taa.TAAmbk(dering,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,cycle=1,thin=0,dark=0.15)
+aa=taa.TAAmbk(dering,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=1,thin=0,dark=0.15)
 aa_md=core.std.MergeDiff(aa, dr_diff)
 #aa=core.std.ShufflePlanes([aa,bm3d],[0,1,2],vs.YUV)
 aa_md=core.std.ShufflePlanes([aa_md,bm3d],[0,1,2],vs.YUV)

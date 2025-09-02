@@ -19,7 +19,7 @@ bm3d_b=core.bm3dcpu.BM3Dv2(src32,cb,sigma=[4,2.4],block_step=8,bm_range=7,radius
 bm3d=core.bm3dcpu.BM3Dv2(src32,bm3d_b,sigma=[1,0.6],block_step=7,bm_range=7,radius=1,ps_num=2,ps_range=5).fmtc.bitdepth(bits=16)
 #Rescale
 rs_y=core.std.ShufflePlanes(bm3d,0,vs.GRAY)
-rs_y=MRcoref(rs_y,'Debilinear',h=720,mask_dif_pix=6,mthr=[6,5],show='result',blur_mask=True,ds_aa=True,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,aacycle=0,dark=0,dering=True,thlimi=80,thlima=160,brightstr=1.0,drthr=5)
+rs_y=MRcoref(rs_y,'Debilinear',h=720,mask_dif_pix=6,mthr=[6,5],show='result',blur_mask=True,ds_aa=True,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,aacycle=0,dark=0,dering=True,thlimi=80,thlima=160,brightstr=1.0,drthr=5)
 rs=core.std.ShufflePlanes([rs_y,bm3d],[0,1,2],vs.YUV)
 #Deband&MergeNoise
 db1=zvs.xdbcas(rs,mask=True,casstr=0.3)

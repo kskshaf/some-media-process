@@ -23,7 +23,7 @@ bm3d_b=core.bm3dcpu.BM3Dv2(src32,tms,sigma=[4,4],block_step=8,bm_range=7,radius=
 bm3d=core.bm3dcpu.BM3Dv2(src32,bm3d_b,sigma=[2,2],block_step=7,bm_range=7,radius=1,ps_num=2,ps_range=5).fmtc.bitdepth(bits=16)
 diff=core.std.MakeDiff(src16,bm3d)
 #
-rs16=rescalef_aa(bm3d,'Debicubic',h=800,b=1/3,c=1/3,mask_dif_pix=2.5,rsmode="znedi3",dering=True,mrad=1.2,mthr=115,csrange=1.2,not_aa=False,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,aacycle=2,dark=0.15,aamask=0)
+rs16=rescalef_aa(bm3d,'Debicubic',h=800,b=1/3,c=1/3,mask_dif_pix=2.5,rsmode="znedi3",dering=True,mrad=1.2,mthr=115,csrange=1.2,not_aa=False,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,aacycle=2,dark=0.15,aamask=0)
 rs16=haf.FineDehalo(rs16,brightstr=0.8,darkstr=0.4)
 rs16=core.std.ShufflePlanes([rs16,bm3d],[0,1,2],vs.YUV)
 #last=zvs.xdbcas(rs16,casstr=0.5,sm=4)

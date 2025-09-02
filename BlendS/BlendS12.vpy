@@ -25,7 +25,7 @@ ec=haf.EdgeCleaner(rs,strength=12,rmode=24)
 ec=haf.FineDehalo(ec,darkstr=0.0,brightstr=0.4)
 #LumaAA
 luma_dn=core.std.ShufflePlanes(bm3d,0,vs.YUV)
-aa=taa.TAAmbk(luma_dn,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2)
+aa=taa.TAAmbk(luma_dn,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2)
 aa=core.std.ShufflePlanes([aa,bm3d],[0,1,2],vs.YUV)
 #Deband
 rs=zvs.xdbcas(ec,y=[36,24],cb=[32,18],cr=[32,18],mask=True,casstr=0.5)

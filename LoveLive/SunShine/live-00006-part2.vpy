@@ -35,7 +35,7 @@ cb=DFTTest(fb32,sigma=5,tbsize=5)
 bm3d_b=core.bm3dcpu.BM3Dv2(fb32,cb,sigma=[3,1.6],block_step=8,bm_range=7,radius=0,ps_num=2,ps_range=4)
 bm3d=core.bm3dcpu.BM3Dv2(fb32,bm3d_b,sigma=[1.5,0.8],block_step=7,bm_range=7,radius=1,ps_num=2,ps_range=5).fmtc.bitdepth(bits=16)
 #AA&Dering
-aa16=taa.TAAmbk(bm3d.std.ShufflePlanes(0,vs.GRAY),aatype=-3,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,cycle=5)
+aa16=taa.TAAmbk(bm3d.std.ShufflePlanes(0,vs.GRAY),aatype=-3,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=5)
 halo_f=muf.mdering(aa16,thr=2)
 dhaf=core.std.ShufflePlanes([halo_f,bm3d],[0,1,2],vs.YUV)
 #Deband

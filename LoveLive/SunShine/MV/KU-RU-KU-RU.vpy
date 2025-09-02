@@ -19,7 +19,7 @@ bm3d_b=core.bm3dcpu.BM3Dv2(src32,cb,sigma=[4,2.4],block_step=8,bm_range=7,radius
 bm3d=core.bm3dcpu.BM3Dv2(src32,bm3d_b,sigma=[1,0.6],block_step=7,bm_range=7,radius=1,ps_num=2,ps_range=5).fmtc.bitdepth(bits=16)
 #AA
 aa_y=core.std.ShufflePlanes(bm3d,0,vs.GRAY)
-aa_y=taa.TAAmbk(aa_y,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,cycle=0)
+aa_y=taa.TAAmbk(aa_y,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=0)
 aa=core.std.ShufflePlanes([aa_y,bm3d],[0,1,2],vs.YUV)
 #Deband
 db1=zvs.xdbcas(aa,mask=True,casstr=0)

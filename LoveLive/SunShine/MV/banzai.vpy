@@ -20,7 +20,7 @@ bm3d=core.bm3dcpu.BM3Dv2(src32,bm3d_b,sigma=[1.5,0.8],block_step=7,bm_range=7,ra
 #AA
 aa_y=core.std.ShufflePlanes(bm3d,0,vs.GRAY)
 aa_y=haf.EdgeCleaner(aa_y,strength=20,rmode=20)
-aa_y=taa.TAAmbk(aa_y,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,cycle=0)
+aa_y=taa.TAAmbk(aa_y,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=0)
 aa=core.std.ShufflePlanes([aa_y,bm3d],[0,1,2],vs.YUV)
 #Deband
 db1=zvs.xdbcas(aa,mask=True,casstr=0)

@@ -59,7 +59,7 @@ rsnd=Deband(rs16,nrmask,range1=8,range2=12,y1=36,c1=24,r1=24,y2=24,c2=16,r2=16,t
 rsnd=core.std.MergeDiff(rsnd,diff)
 rsnd=adp.adptvgrnMod(rsnd,strength=0.45,size=1.5,sharp=30,static=False,luma_scaling=12,grain_chroma=False)
 #AA&Deband
-aa16=taa.TAAmbk(rs16,aatype=3,aarepair=-20,mtype=2,sharp=-0.5,postaa=True,stablize=2,cycle=2)
+aa16=taa.TAAmbk(rs16,aatype=3,aarepair=-20,mtype=2,sharp=-0.5,postaa=True,stabilize=2,cycle=2)
 aa16=Deband(aa16,nrmask,range1=8,range2=12,y1=36,c1=24,r1=24,y2=24,c2=16,r2=16,thr=0.6,thrc=0.5,elast=2.8,first_plane=False)
 aa16=core.std.MergeDiff(aa16,diff)
 aa16=adp.adptvgrnMod(aa16,strength=0.45,size=1.5,sharp=30,static=False,luma_scaling=12,grain_chroma=False)

@@ -27,7 +27,7 @@ dehalo=haf.FineDehalo(bm3d_y,thlimi=80,thlima=160,brightstr=0.5,darkstr=0)
 dering=haf.HQDeringmod(dehalo,mrad=1,msmooth=1,mthr=58,minp=1,sharp=1,thr=2.8,elast=2.0)
 dering=haf.EdgeCleaner(dering,strength=10,rmode=20)
 # AA
-aa=taa.TAAmbk(dering,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stablize=2,cycle=1,thin=0,dark=0.15)
+aa=taa.TAAmbk(dering,aatype=1,aarepair=-20,sharp=-0.5,mtype=3,postaa=True,stabilize=2,cycle=1,thin=0,dark=0.15)
 aa=core.std.ShufflePlanes([aa,bm3d],[0,1,2],vs.YUV)
 # Deband & Sharpen
 db1=zvs.xdbcas(aa,y=[48,36],cb=[36,32],cr=[36,32],mask=True,casstr=0.1)
